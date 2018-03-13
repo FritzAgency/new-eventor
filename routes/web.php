@@ -19,9 +19,12 @@
 create event page
 */ 
 
-Route::get('/createevent', 'CreateEventController@create');
+// Route::get('/createevent', 'CreateEventController@create');
 
-Route::post('/createevent', 'CreateEventController@save');  
+// Route::post('/createevent', 'CreateEventController@save');  
 
 
-Route::get('/', 'CreateEventController@display'); 
+// Route::get('/', 'CreateEventController@display'); 
+
+//This route is for signup page
+Route::get('/signup', 'PagesController@signup');
