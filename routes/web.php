@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+/*
+create event page
+*/ 
+
+Route::get('/createevent', 'CreateEventController@create'); 
