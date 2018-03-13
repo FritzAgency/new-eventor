@@ -29,5 +29,9 @@ create event page
 //This route is for signup page
 Route::get('/signup', 'PagesController@signup');
 
+<<<<<<< HEAD
 //This route is for login page
 Route::get('/login', 'PagesController@login');
+=======
+Route::post('/signup', 'SignupController@register'); 
+>>>>>>> 0b48bd9c76e20fef3904283b37e4f3367eca96b6
