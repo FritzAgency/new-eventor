@@ -8351,7 +8351,7 @@ button.close {
 }
 
 body {
-  background-color: #eee;
+  background-color: yellow;
 }
 
 *[role="form"] {
@@ -8365,9 +8365,5 @@ body {
 *[role="form"] h2 {
   margin-left: 5em;
   margin-bottom: 1em;
-}
-
-.newh1 {
-  padding-left: 15px;
 }
 

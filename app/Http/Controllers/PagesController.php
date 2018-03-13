@@ -10,4 +10,9 @@ class PagesController extends Controller
     public function signup(){
         return view ('pages.signup');
     }
+
+    //This controller controls
+    public function login(){
+        return view ('pages.login');
+    }
 }
