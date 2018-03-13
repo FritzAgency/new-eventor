@@ -29,4 +29,4 @@ create event page
 
 Route::post('/signup', 'SignupController@register'); 
 
-Route::post('/signup', 'LoginController@login'); 
+Route::get('/login', 'PagesController@login');

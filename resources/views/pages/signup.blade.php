@@ -68,11 +68,6 @@
                                         <input type="radio" id="maleRadio" value="Male" name="gneder">Male
                                     </label>
                                 </div>
-                                <div class="col-sm-4">
-                                    <label class="radio-inline">
-                                        <input type="radio" id="uncknownRadio" value="Unknown" name="gender">Unknown
-                                    </label>
-                                </div>
                             </div>
                         </div>
                     </div> <!-- /.form-group -->
@@ -83,6 +78,13 @@
                             <input type="phoneNumber" id="phoneNumber" placeholder="Phone Number" name="phoneNumber" class="form-control">
                         </div>
                     </div>
+
+                    <div class="form-group">
+                            <h4 style="padding-left: 15px;">Phone Number</h4>
+                            <div class="col-sm-12">
+                                <input type="orgAddress" id="phoneNumber" placeholder="Phone Number" name="phoneNumber" class="form-control">
+                            </div>
+                        </div>
 
                     <div class="form-group">
                         <h4 style="padding-left: 15px;">Twitter Account</h4>
