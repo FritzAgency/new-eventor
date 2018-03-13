@@ -12,46 +12,42 @@
 </head>
 <body>
 
-        <div class="container">
+        <div class="container" style="width:500px;">
                 <form class="form-horizontal" role="form">
                     <h2>Signup Form</h2>
                     <div class="form-group">
-                        <label for="firstName" class="col-sm-3 control-label">Last Name</label>
-                        <div class="col-sm-9">
+                        <h4 style="padding-left: 15px;">Name</h4>
+                        <div class="col-sm-6">
                             <input type="text" id="firstName" placeholder="First Name" class="form-control" autofocus>
-                            <span class="help-block">Last Name, eg.: Smith, Harry</span>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="lasttName" class="col-sm-3 control-label">Last Name</label>
-                        <div class="col-sm-9">
+                        <div class="col-sm-6">
                             <input type="text" id="lastName" placeholder="Last Name" class="form-control" autofocus>
-                            <span class="help-block">Last Name eg.: Smith, Harry</span>
                         </div>
                     </div>
-                    
+                                        
                     <div class="form-group">
-                        <label for="email" class="col-sm-3 control-label">Email</label>
-                        <div class="col-sm-9">
+                        <h4 style="padding-left: 15px;">Email</h4>
+                        <div class="col-sm-12">
                             <input type="email" id="email" placeholder="Email" class="form-control">
                         </div>
                     </div>
+
                     <div class="form-group">
-                        <label for="password" class="col-sm-3 control-label">Password</label>
-                        <div class="col-sm-9">
+                            <h4 style="padding-left: 15px;">Password</h4>
+                        <div class="col-sm-12">
                             <input type="password" id="password" placeholder="Password" class="form-control">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="birthDate" class="col-sm-3 control-label">Date of Birth</label>
-                        <div class="col-sm-9">
+                            <h4 style="padding-left: 15px;">Date Of Birth</h4>
+                        <div class="col-sm-12">
                             <input type="date" id="birthDate" class="form-control" style="padding:2px">
                         </div>
                     </div>
                    
                     <div class="form-group">
-                        <label class="control-label col-sm-3">Gender</label>
-                        <div class="col-sm-6">
+                        <h4 style="padding-left: 15px;">Gender</h4>
+                        <div class="col-sm-12">
                             <div class="row">
                                 <div class="col-sm-4">
                                     <label class="radio-inline">
@@ -71,9 +67,37 @@
                             </div>
                         </div>
                     </div> <!-- /.form-group -->
+
+                    <div class="form-group">
+                        <h4 style="padding-left: 15px;">Phone Number</h4>
+                        <div class="col-sm-12">
+                            <input type="phoneNumber" id="phoneNumber" placeholder="Phone Number" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <h4 style="padding-left: 15px;">Twitter Account</h4>
+                        <div class="col-sm-12">
+                            <input type="twitter" id="twitterr" placeholder="Twitter Handle" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                            <h4 style="padding-left: 15px;">Instagram Account</h4>
+                            <div class="col-sm-12">
+                                <input type="instagram" id="intagram" placeholder="Instagram Page" class="form-control">
+                            </div>
+                        </div>
+
+                    <div class="form-group">
+                        <h4 style="padding-left: 15px;">Facebook Account</h4>
+                        <div class="col-sm-12">
+                            <input type="facebook" id="facebook" placeholder="facebook Page" class="form-control">
+                        </div>
+                    </div>
                     
                     <div class="form-group">
-                        <div class="col-sm-9 col-sm-offset-3">
+                        <div class="col-sm-12">
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox">I accept <a href="#">terms</a>
@@ -81,9 +105,10 @@
                             </div>
                         </div>
                     </div> <!-- /.form-group -->
+                    
                     <div class="form-group">
-                        <div class="col-sm-9 col-sm-offset-3">
-                            <button type="submit" class="btn btn-primary btn-block">Register</button>
+                        <div class="col-sm-12">
+                            <button type="submit" class="btn btn-primary btn-block">Submit</button>
                         </div>
     
 </body>
