@@ -11,12 +11,17 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/ 
 
 /*
 create event page
 */ 
 
-Route::get('/createevent', 'CreateEventController@create'); 
+Route::get('/createevent', 'CreateEventController@create');
+
+Route::post('/createevent', 'CreateEventController@save');  
+
+
+Route::get('/', 'CreateEventController@display'); 
