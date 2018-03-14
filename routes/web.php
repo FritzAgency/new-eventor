@@ -26,7 +26,18 @@ create event page
 
 // Route::get('/', 'CreateEventController@display'); 
 
+Route::get('/dashboard', function(){
+
+	return view('pages.dashboard'); 
+ 
+}); 
+
+Route::get('/signup', 'SignupController@show'); 
 
 Route::post('/signup', 'SignupController@register'); 
 
-Route::post('/signup', 'LoginController@login'); 
+Route::get('/login', 'LoginController@login'); 
+
+Route::post('/login', 'SignupController@login'); 
+
+Route::get('/logout', 'SignupController@logout'); 
