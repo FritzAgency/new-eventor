@@ -10,6 +10,7 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" href="{{ URL::asset('css/app.scss') }}" />
 </head>
+
 <body>
         @include('inc.header')
 
