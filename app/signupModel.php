@@ -8,8 +8,9 @@ class signupModel extends Model
 {
     //
 
-      protected $table = 'account';
+      public $table = "users";
+      protected $primaryKey = 'id';
      protected $fillable = [
-        'first_name', 'last_name', 'email', 'gender', 'phoneNumber', 'twitter', 'facebook', 'instagram', 'dob' 
+        'first_name', 'last_name', 'email', 'password', 'gender', 'phoneNumber', 'twitter', 'facebook', 'instagram', 'dob' 
     ];
 }

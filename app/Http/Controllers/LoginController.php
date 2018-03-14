@@ -8,7 +8,8 @@ class LoginController extends Controller
 {
     public function login(Request $request){
 
-        return 'good'; 
+       return view('pages.login'); 
+ 
   
-          }
+    }
 }
