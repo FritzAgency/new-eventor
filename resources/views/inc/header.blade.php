@@ -1,3 +1,4 @@
+@section('content')
 <nav class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -12,3 +13,4 @@
           </ul>
         </div>
       </nav> 
+@endsection
