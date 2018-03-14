@@ -36,17 +36,10 @@ Route::get('/signup', 'SignupController@show');
 
 Route::post('/signup', 'SignupController@register'); 
 
-<<<<<<< HEAD
-Route::get('/login', 'PagesController@login');
-
-Route::get('/home', 'PagesController@home');
-
-
-
-=======
 Route::get('/login', 'LoginController@login'); 
 
 Route::post('/login', 'SignupController@login'); 
 
 Route::get('/logout', 'SignupController@logout'); 
->>>>>>> 395f320926ac893620ec99daa8c378cd5e7e9646
+
+Route::get('/home','PagesController@home');

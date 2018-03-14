@@ -1,6 +1,5 @@
-@extends('layouts.apps')
 
-@include('inc.header')
+@extends('layouts.apps')
 
 @section('content')
         <div class="container" style="width:500px;">
@@ -42,11 +41,5 @@
                         <div class="col-sm-12">
                             <button type="submit" class="btn btn-primary btn-block">Login</button>
                         </div>
-<<<<<<< HEAD
-    
-@endsection
-=======
-    </form> 
-</body>
-</html>
->>>>>>> 395f320926ac893620ec99daa8c378cd5e7e9646
+    </form>
+    @endsection 

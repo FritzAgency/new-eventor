@@ -11,9 +11,13 @@
     <link rel="stylesheet" href="{{ URL::asset('css/app.scss') }}" />
 </head>
 <body>
-        @yield('header')
+        @include('inc.header')
+
+    <div class="container">
         @yield('content')
-        @yield('footer')
+    </div>
+
+        @include('inc.footer')
 
 </body>
 </html>
