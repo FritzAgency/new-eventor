@@ -30,3 +30,8 @@ create event page
 Route::post('/signup', 'SignupController@register'); 
 
 Route::get('/login', 'PagesController@login');
+
+Route::get('/home', 'PagesController@home');
+
+
+
