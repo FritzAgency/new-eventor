@@ -250,10 +250,14 @@
                                             
                         <div class="form-group"> <!-- Zip Code-->
                             <div class="col-sm-3">
-                            <label for="zip_id" class="control-label">Zip Code</label>
-                            <input type="text" class="form-control" id="zip_id" name="zip" placeholder="#####">
+                            <p><span class="glyphicon glyphicon-map-marker"> Map</span></p>
                         </div>
                         </div>
+
+
+                        <hr class="separator">
+                        <h2>3. When</h2>
+                        <hr class="separator">
 
                         <div class="form-group">
                             <div class="row">
@@ -286,22 +290,83 @@
                                     </div>
                                 </div>
                             </div>
-
                             
-                        <!--div class="form-group">
+                            <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                                <div class="dropdown">
+                                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Schedule Multiple Activities <b class="caret"></b></a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><form class="form-group"></li>
+                                                            <li><a href="#">Fill Form</a></li>
+                                                        </ul>
+                                                    </div>
+                                        </div>
+                                </div>
+                                <hr class="separator">
+                                <h2>4. How</h2>
+                                <hr class="separator">
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                                <input type="text" id="free" placeholder=" Free +" name="free" class="form-control">
+                                        </div>
+
+                                        <div class="col-sm-4">
+                                                <input type="text" id="paid" placeholder=" Paid +" name="paid" class="form-control">
+                                        </div>
+
+                                        <div class="col-sm-4">
+                                                <input type="text" id="reserve" placeholder=" Reserved +" name="reserve" class="form-control">
+                                        </div>
+                                    </div> 
+                                </div>
+
+                                <h3>Tickets</h3>
+                                
+                                <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                    <input type="text" id="quantity" placeholder="- Quantiy +" name="quantiy" class="form-control">
+                                            </div>
+    
+                                            <div class="col-sm-6">
+                                                    <input type="text" id="price" placeholder="- Price +" name="price" class="form-control">
+                                            </div>
+
+                                        </div> 
+                                    </div>
+
+                                    <h3>Link to Social Media</h3>
+                                
+                                <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                    <input type="text" id="socialMedia" placeholder="Social Account" name="quantiy" class="form-control">
+                                            </div>
+                                        </div> 
+                                    </div>
+
+                        <div class="form-group">
                             <div class="col-sm-12">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox">I accept <a href="#">terms</a>
+                                        <input type="checkbox">I agree to the <a href="#">terms</a> of us 
                                     </label>
                                 </div>
                             </div>
-                        </div--> <!-- /.form-group -->
+                        </div>
                         
                         <div class="form-group">
-                            <div class="col-sm-12">
-                                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                            <div class="row">
+                                    <div class="col-sm-6">
+                                            <button type="Submit" class="btn btn-primary btn-block">Save</button>
+                                        </div>                            
+                            <div class="col-sm-6">
+                                <button type="submit" class="btn btn-success btn-block">Preview</button>
                             </div>
+                        </div>
         </form>
         {{--  <script type="text/javascript"
         src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js">
