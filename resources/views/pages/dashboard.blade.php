@@ -9,13 +9,13 @@
 <body>
 
 @if(!Auth::guest())	
-<h1>Welcome</h1> {{ Auth::user()->first_name }}
+<h1> Welcome, {{ Auth::user()->first_name }}</h1></br> 
 @else
 <a href="#login"> login </a>
 @endif
 
 @if(!Auth::guest())
-<a href="/logout">Logout 
+<p> <a href="/logout">Logout </p>
 @else
 <a href="/signup">signup</a>
 @endif
