@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/dashboard', function(){
 	return view('pages.dashboard');  
 }); //route to display the dashboard
@@ -24,10 +25,11 @@ Route::get('/login', 'AuthController@showLogin');  //route to display the login 
 
 Route::post('/login', 'AuthController@login');  //route that controls what happen when user click on the submit button on the login page.  
 
-<<<<<<< HEAD
 Route::get('/logout', 'AuthController@logout'); //route that controls logging out.  
-=======
-Route::get('/logout', 'SignupController@logout'); 
+//Route::get('/logout', 'SignupController@logout'); 
 
 Route::get('/home','PagesController@home');
->>>>>>> 8b63f948014609f457f1ab19abf26bf6ad386183
+
+Route::get('/createevent', 'createEventController@create'); //route to display the create event page
+
+Route::post('/createevent', 'createEventController@save');  
