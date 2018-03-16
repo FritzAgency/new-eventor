@@ -125,7 +125,7 @@
                                                                 </div>
                                                         </div>
                                                         <i class="material-icons">&#xe567;</i>
-                                <div class="form-group">
+                                {{--  <div class="form-group">
                                              <div class="col-sm-12">
                                                 <label for="password" class="col-sm-5 control-label" style="text-align:left;">Password</label>
                                                 <input type="password" id="password" placeholder="Password" class="form-control">
@@ -174,7 +174,7 @@
                                                     </label>
                                                 </div>
                                             </div>
-                                        </div> 
+                                        </div>   --}}
                                         <div class="form-group">
                                             <div class="col-sm-9 col-sm-offset-3">
                                                 <div class="checkbox">
