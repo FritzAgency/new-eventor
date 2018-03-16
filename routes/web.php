@@ -11,6 +11,12 @@
 |
 */
 
+/*
+
+route to generate the homepage 
+*/ 
+
+Route::get('/', 'HomeController@show'); 
 
 Route::get('/dashboard', function(){
 	return view('pages.dashboard');  
@@ -32,4 +38,18 @@ Route::get('/home','PagesController@home');
 
 Route::get('/createevent', 'createEventController@create'); //route to display the create event page
 
-Route::post('/createevent', 'createEventController@save');  
+Route::post('/createevent', 'createEventController@save'); 
+
+/*Route::get('/event/{id}', 'createEventController@displayEvent' );  */ 
+
+Route::get('/event/{id}', function () {
+ 
+/*return view('/event/{id}')->with('event',$event); */
+$my= Route::input('id');
+
+$event = DB::table('event')->where('id', '=', $my)->get(); 
+
+return view('pages.event')->with('event',$event);
+
+});
+

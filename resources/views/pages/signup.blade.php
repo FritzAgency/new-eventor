@@ -8,11 +8,20 @@
  <input name="_token" type="hidden" value="{{ csrf_token() }}">
 
                     <h2>Signup Form</h2>
+                   
                                     @if ( count( $errors ) > 0 )
    @foreach ($errors->all() as $error)
       <div>{{ $error }}</div>
-  @endforeach
+      @endforeach
 @endif
+
+@if(Session::has('message'))
+    <div class="alert alert-info">
+        {{ Session::get('message') }}
+    </div>
+@endif
+
+
                     <div class="form-group">
                         <h4 style="padding-left: 15px;">Name<span class="fa fa-asterisk text-danger"> *</span></h4> 
                         <div class="col-sm-6">
@@ -114,7 +123,7 @@
                     
                     <div class="form-group">
                         <div class="col-sm-12">
-                            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                            <button type="submit" class="btn btn-primary btn-block" name="submit">Submit</button>
                         </div>
     </form>
     @endsection
