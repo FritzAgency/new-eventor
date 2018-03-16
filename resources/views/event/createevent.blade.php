@@ -48,9 +48,6 @@
 @foreach ($errors->all() as $error)
 <div>{{ $error }}</div>
 @endforeach
-@else
-
-<!--  {{$message}}-->
 @endif
 
 <h2>1. What</h2>

@@ -103,7 +103,7 @@ $filename = $file->getClientOriginalName();
         //return 'Page creation successful';
 
         //$message = 'success'; 
-return Redirect::back()->with('message', 'Message Body');
+return Redirect::back();
 
 //return view::make("event.createevent", ["message"=>$message]);
         //return Redirect::back()->with(['message', 'Success']); 
