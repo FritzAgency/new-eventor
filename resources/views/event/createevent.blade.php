@@ -90,7 +90,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                                         <div class="col-sm-12">
-                                                                            <label for="Org Address" class="col-sm-12 control-label" style="text-align:left;">Organizer Address</label>
+                                                                            <label for="Org Address" class="col-sm-12 control-label" style="text-align:left;">Address</label>
                                                                             <input type="text" id="OrgAddress" placeholder="Enter Address" class="form-control">
                                                                         </div>
                                                                     </div>
