@@ -43281,7 +43281,7 @@ if (false) {
 /* 42 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: \n@import \"custom\";\n^\n      Media query expression must begin with '('\n      in /opt/lampp/htdocs/new-eventor/resources/assets/sass/app.scss (line 14, column 1)\n    at runLoaders (/opt/lampp/htdocs/new-eventor/node_modules/webpack/lib/NormalModule.js:195:19)\n    at /opt/lampp/htdocs/new-eventor/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /opt/lampp/htdocs/new-eventor/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at context.callback (/opt/lampp/htdocs/new-eventor/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (/opt/lampp/htdocs/new-eventor/node_modules/sass-loader/lib/loader.js:55:13)\n    at Object.done [as callback] (/opt/lampp/htdocs/new-eventor/node_modules/neo-async/async.js:7921:18)\n    at options.error (/opt/lampp/htdocs/new-eventor/node_modules/node-sass/lib/index.js:294:32)");
 
 /***/ })
 /******/ ]);

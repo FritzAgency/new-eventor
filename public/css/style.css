@@ -1,3 +1,67 @@
 body{
-    background-color: yellow;
+  background-image: url("../img/background.jpg");
 }
+
+#make{
+    margin-top: -5px;
+margin-left: 476px;
+}
+
+#small{
+    background-color: #ffffff;
+    padding: 0px;
+    margin: 0px;
+    padding-top: 0px;
+}
+
+#exTab1 .tab-content {
+    color : white;
+    background-color: grey;
+    padding : 5px 15px;
+  }
+  
+  #exTab2 h3 {
+    color : white;
+    background-color:grey;
+    padding : 5px 15px;
+  }
+  
+  /* remove border radius for the tab */
+  
+  #exTab1 .nav-pills > li > a {
+    border-radius: 0;
+  }
+  
+  /* change border radius for the tab , apply corners on top*/
+  
+  #exTab3 .nav-pills > li > a {
+    border-radius: 4px 4px 0 0 ;
+  }
+  
+  #exTab3 .tab-content {
+    color : white;
+    background-color: grey;
+    padding : 5px 15px;
+  }
+
+  .vertical-text {
+    transform: rotate(90deg);
+    transform-origin: left top 0;
+    }
+
+.nav-pills{
+    background-color: #4f2684;
+}
+
+.w3-container, .w3-panel{
+  padding: 0.00em 0px;
+}
+
+.w3-bar .w3-bar-item {
+  margin-left: 3px;
+}
+
+#wee{
+  width: 24.333%;
+}
+

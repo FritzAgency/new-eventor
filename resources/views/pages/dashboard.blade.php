@@ -1,420 +1,263 @@
-<<<<<<< HEAD
-
-
-   <!DOCTYPE html>
-   <html lang="en">
-   <head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-       <title>Document</title>
-       <link rel="stylesheet" href="{{('css/style.css')}}">
-   </head>
-   <body>
-       <h1>Hello world</h1>
-   </body>
-   </html>
-=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Document</title>
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<link rel="stylesheet" href="{{ URL::asset('css/app.scss') }}" />
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-<style type="text/css">
-.bs-example {<!--from  w ww .j  a  va 2  s.co m-->
-margin: 20px;
-}
-</style>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="{{asset('css/style.css')}}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+
+
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 650px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
 </head>
 <body>
-<nav class="navbar navbar-inverse">
-<div class="container-fluid">
-<div class="navbar-header">
-<a class="navbar-brand" href="#">WebSiteName</a>
-</div>
-<ul class="nav navbar-nav">
-<li style="margin: 0px 20px;"><h2><a href="#">Create Event</a></h2></li>
-</ul>
-<ul class="nav navbar-nav navbar-right">
-<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-</ul>
-</div>
-</nav> > 
+  
+<div class="container text-center" style="width: 90%">    
+  <div class="row content">
+    <div class="col-sm-6 sidenav" id="small">
+        <div class="row content" style="height:200px;">
+            <div class="col-sm-11 sidenav" id="small">
+                {{-- carousel for media --}}
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                          <li data-target="#myCarousel" data-slide-to="1"></li>
+                          <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                      
+                        {{-- <!-- Wrapper for slides --> --}}
+                        <div class="carousel-inner">
+                          <div class="item active">
+                            <img src="../img/generatedpic.jpg" alt="image from uploaded 1" style="width: 800px;">
+                          </div>
+                          
+                          <div class="item">
+                            <img src="../img/generatedpic.jpg" alt="image from uploaded 1" style="width: 800px;">
+                          </div>
+                      
+                          <div class="item">
+                            <img src="../img/generatedpic.jpg" alt="image from uploaded 1" style="width: 800px;">
+                          </div>
+                        </div>
+                      
+                        {{-- <!-- Left and right controls --> --}}
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                          <span class="glyphicon glyphicon-chevron-left"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                          <span class="glyphicon glyphicon-chevron-right"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
 
-<div class="container" style="width:500px;">
-<form class="form-horizontal" role="form" method="POST" action="/signup">
+ 
+                      <div class="w3-container">
+                        <div class="w3-bar w3-white">
+                          <button class="w3-bar-item w3-button tablink" style="font-weight:bold; font-size:18px; margin-left:30px; padding-left:5px; border-radius:7px; width:120px; height:40px; background-color:grey;" onclick="openCity(event,'hiking')">Hiking</button>
+                          <button class="w3-bar-item w3-button tablink" style="font-weight:bold; font-size:18px; padding-left:5px; border-radius: 4%; width:120px; height:40px; background-color:grey;" onclick="openCity(event,'jogging')">Jogging</button>
+                          <button class="w3-bar-item w3-button tablink" style="font-weight:bold; font-size:18px; padding-left:5px; border-radius: 4%; width:120px; height:40px; background-color:grey;" onclick="openCity(event,'dance')">Dance</button>
+                          <button class="w3-bar-item w3-button tablink" style="font-weight:bold; font-size:18px; padding-left:5px; border-radius: 4%; width:120px; height:40px; background-color:grey;" onclick="openCity(event,'tour_guide')">Tour Guide</button>
+                          <button class="w3-bar-item w3-button tablink" style="font-weight:bold; font-size:18px; padding-left:5px; border-radius: 4%; width:120px; height:40px; background-color:grey;" onclick="openCity(event,'tasks')">Tasks</button>
+                        </div>
+                        
+                        <div id="hiking" class="w3-container w3-border city" style="background-color:#ffffff;">
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <p style="text-align: justify;background: white; padding: 10px;">Hiking is the preferred term, in Canada and the United States, for a long, vigorous walk, usually on trails (footpaths), in the countryside, while the word walking is used for shorter, particularly urban walks. On the other hand, in the United Kingdom, and the Republic of Ireland, the word "walking" is acceptable to describe all forms of walking, whether it is a walk in the park or backpacking in the Alps. The word hiking is also often used in the UK, along with rambling (a slightly old-fashioned term), hillwalking, and fell walking (a term mostly used for hillwalking in northern England). The term bushwalking is endemic to Australia, having been adopted by the Sydney Bush Walkers club in 1927.</p>
+                            </div>
+                            <div class="col-sm-6" style="margin:auto; padding: 40px 0px 0px 0px;">
+                              <p style="font-weight: bold; margin-top: 20px;">Time</p>
+                              <input type="text" placeholder="12:00PM" style="width:35%; top-margin: 10px;">
+                              <p style="font-weight: bold;">-</p>
+                              <input type="text" placeholder="12:00PM" style="width:35%; top-margin: 10px;">
+                              <div>
+                              <button class="btn btn-primary btn-lg" style="margin-top: 20px; width:50%;">Schedule</button>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <div id="jogging" class="w3-container w3-border city" style="display:none; background-color:#ffffff;">
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <p style="text-align: justify;background: white; padding: 10px;">Hiking is the preferred term, in Canada and the United States, for a long, vigorous walk, usually on trails (footpaths), in the countryside, while the word walking is used for shorter, particularly urban walks. On the other hand, in the United Kingdom, and the Republic of Ireland, the word "walking" is acceptable to describe all forms of walking, whether it is a walk in the park or backpacking in the Alps. The word hiking is also often used in the UK, along with rambling (a slightly old-fashioned term), hillwalking, and fell walking (a term mostly used for hillwalking in northern England). The term bushwalking is endemic to Australia, having been adopted by the Sydney Bush Walkers club in 1927.</p>
+                            </div>
+                            <div class="col-sm-6" style="margin:auto; padding: 40px 0px 0px 0px;">
+                              <p style="font-weight: bold; margin-top: 20px;">Time</p>
+                              <input type="text" placeholder="12:00PM" style="width:35%; top-margin: 10px;">
+                              <p style="font-weight: bold;">-</p>
+                              <input type="text" placeholder="12:00PM" style="width:35%; top-margin: 10px;">
+                              <div>
+                              <button class="btn btn-primary btn-lg" style="margin-top: 20px; width:50%;">Schedule</button>
+                            </div>
+                            </div>
+                          </div> 
+                        </div>
+                      
+                        <div id="dance" class="w3-container w3-border city" style="display:none; background-color:#ffffff;">
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <p style="text-align: justify;background: white; padding: 10px;">Hiking is the preferred term, in Canada and the United States, for a long, vigorous walk, usually on trails (footpaths), in the countryside, while the word walking is used for shorter, particularly urban walks. On the other hand, in the United Kingdom, and the Republic of Ireland, the word "walking" is acceptable to describe all forms of walking, whether it is a walk in the park or backpacking in the Alps. The word hiking is also often used in the UK, along with rambling (a slightly old-fashioned term), hillwalking, and fell walking (a term mostly used for hillwalking in northern England). The term bushwalking is endemic to Australia, having been adopted by the Sydney Bush Walkers club in 1927.</p>
+                            </div>
+                            <div class="col-sm-6" style="margin:auto; padding: 40px 0px 0px 0px;">
+                              <p style="font-weight: bold; margin-top: 20px;">Time</p>
+                              <input type="text" placeholder="12:00PM" style="width:35%; top-margin: 10px;">
+                              <p style="font-weight: bold;">-</p>
+                              <input type="text" placeholder="12:00PM" style="width:35%; top-margin: 10px;">
+                              <div>
+                              <button class="btn btn-primary btn-lg" style="margin-top: 20px; width:50%;">Schedule</button>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+              
+                        <div id="tour_guide" class="w3-container w3-border city" style="display:none; background-color:#ffffff;">
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <p style="text-align: justify;background: white; padding: 10px;">Hiking is the preferred term, in Canada and the United States, for a long, vigorous walk, usually on trails (footpaths), in the countryside, while the word walking is used for shorter, particularly urban walks. On the other hand, in the United Kingdom, and the Republic of Ireland, the word "walking" is acceptable to describe all forms of walking, whether it is a walk in the park or backpacking in the Alps. The word hiking is also often used in the UK, along with rambling (a slightly old-fashioned term), hillwalking, and fell walking (a term mostly used for hillwalking in northern England). The term bushwalking is endemic to Australia, having been adopted by the Sydney Bush Walkers club in 1927.</p>
+                            </div>
+                            <div class="col-sm-6" style="margin:auto; padding: 40px 0px 0px 0px;">
+                              <p style="font-weight: bold; margin-top: 20px;">Time</p>
+                              <input type="text" placeholder="12:00PM" style="width:35%; top-margin: 10px;">
+                              <p style="font-weight: bold;">-</p>
+                              <input type="text" placeholder="12:00PM" style="width:35%; top-margin: 10px;">
+                              <div>
+                              <button class="btn btn-primary btn-lg" style="margin-top: 20px; width:50%;">Schedule</button>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+              
+                        <div id="tasks" class="w3-container w3-border city" style="display:none; background-color:#ffffff;">
+                          <p style="text-align: justify;background: white; padding: 10px;">tasks conent in here</p>
+                        </div>
+                      </div>
 
-<input name="_token" type="hidden" value="{{ csrf_token() }}">
-<h2>1. What</h2>
-<hr class="separator">
+            </div>
+            <div class="col-sm-1 sidenav" id="small">
+                <div style="height: 150px; background-color: grey;">
+                    
+                </div>
+                <div style="height: 150px; background-color: f1f1f1;">
+                    
+                </div>
+                <div style="height: 150px; background-color: grey;">
+                    
+                </div>
+        
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 sidenav" id="small" style="padding: 36px 10px 0 31px;">
+        <div>
+          <h1 style="text-align: left;">A Trip To The <br> Hills of Idanre</h1>
+        </div>
+        <div class="w3-row">
+          <a href="javascript:void(0)" onclick="openCity1(event, 'about');">
+            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding" id="wee">Aout</div>
+          </a>
+          <a href="javascript:void(0)" onclick="openCity1(event, 'sponsors');">
+            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding" id="wee">Sponsors</div>
+          </a>
+          <a href="javascript:void(0)" onclick="openCity1(event, 'location');">
+            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding" id="wee">Location</div>
+          </a>
+          <a href="javascript:void(0)" onclick="openCity1(event, 'location');">
+            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding" id="wee">Vendors</div>
+          </a>
+        </div>
+      
+        <div id="about" class="w3-container city1" style="display:none">
+         <p>
+          Play paper games. You don’t need to have any special equipment or boxed games to have a lot of fun. There are plenty of games you can play simply with a pen and paper and your friends.
+          
+              Play MASH.[4] MASH is a fun, customizable game that will let you find out who you’re going to marry, where you’ll live, and how many kids you’ll have.
+              Play truth or dare. Truth or dare is a classic game to play with friends. Just make sure you set some ground rules for dares before you begin to play.
+              Enjoy two truths and a lie.[5] This game is a great way to get to know more about your friends. Everyone writes down two things that are true about themselves and one thing that isn’t true. Then, you have to guess which was the lie.
+              Play charades with your friends. You can either decide on a category or write down a bunch of possibilities beforehand, and place them all in a bowl for players to choose from.</p>
+        </div>
+      
+        <div id="sponsors" class="w3-container city1" style="display:none">
+          <p>contents for sponsors goes in here</p> 
+        </div>
+      
+        <div id="location" class="w3-container city1" style="display:none">
+          <p>content for location goes in here</p>
+        </div>
 
-<h2>Signup Form</h2>
-@if ( count( $errors ) > 0 )
-@foreach ($errors->all() as $error)
-<div>{{ $error }}</div>
-@endforeach
-@endif
-<div class="row btn-primary" style="width:20%; boarder-radius: 50%;">
-<div class="col-md-6" style="padding:5px 0px 0px 0px; margin:auto;">
-<p>Public</p>
-</div>
-<div class="col-md-6" style="padding:5px 0px 0px 0px; margin:auto;">
-<p>Private</p>
-</div>
-
-</div>
-
-<div class="form-group">
-<h4 style="padding-left: 15px;">Event Title<span class="fa fa-asterisk text-danger"> *</span></h4> 
-<div class="col-sm-6">
-<input type="text" id="firstName" name="first_name" placeholder="Event Title" class="form-control" autofocus>
-</div>
-</div>
-
-<div class="form-group">
-<h4 style="padding-left: 15px;">Description<span class="fa fa-asterisk text-danger"> *</span></h4>
-<div class="col-sm-12">
-<textarea type="description" name="description" id="description" placeholder="Write a short passage to describe your event " class="form-control"></textarea>
-</div>
-</div>
-
-<div class="form-group">
-<div class="col-sm-12">
-<label class="radio-inline">
-<input type="radio" name="free">free
-</label>
-<label class="radio-inline">
-<input type="radio" name="paid">paid
-</label>
-</div>
-</div>
-<div class="dropdown">
-<p class="dropdown-toggle" type="text" data-toggle="dropdown">Sponsors
-<span class="caret"></span></p>
-<ul class="dropdown-menu">
-<li><input type="text" placeholder="Sponsors Name" /></li>
-<li><div class="file btn btn-sm btn-primary">
-Upload
-<input type="file" name="file"/>
-</div></li>
-</ul>
-</div>
-
-<div class="form-group">
-<h4 style="padding-left: 15px;">Organizer Name<span class="fa fa-asterisk text-danger"> *</span></h4>
-<div class="col-sm-12">
-<input type="text" id="orgName" placeholder="Organizer Name" name="orgName" class="form-control">
-</div>
-</div>
-
-<div class="form-group">
-<h4 style="padding-left: 15px;">Event Flier<span class="fa fa-asterisk text-danger"> *</span></h4>
-<div class="col-sm-12">
-<div>
-<img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fd3n8a8pro7vhmx.cloudfront.net%2Fveracitymedia%2Fpages%2F2027%2Fattachments%2Foriginal%2F1463445378%2Fold-glyph.png%3F1463445378&imgrefurl=http%3A%2F%2Fwww.veracitymedia.com%2Fblog&docid=a3c3YHov8srV8M&tbnid=6__FB_V9qh1wmM%3A&vet=10ahUKEwjlhIKItOzZAhWIvxQKHUXFDiEQMwiBAigFMAU..i&w=300&h=300&client=ubuntu&bih=676&biw=1366&q=former%20instagram%20logo&ved=0ahUKEwjlhIKItOzZAhWIvxQKHUXFDiEQMwiBAigFMAU&iact=mrc&uact=8" alt="">
-</div>
-<div class="file btn btn-lg btn-primary">
-Upload
-<input type="file" name="file"/>
-</div>
-</div>
-</div>
-
-<div class="form-group">
-<h4 style="padding-left: 15px;">Organizer Logo<span class="fa fa-asterisk text-danger"> *</span></h4>
-<div class="col-sm-12">
-<div class="file btn btn-lg btn-primary">
-Upload
-<input type="file" name="file"/>
-</div>
-</div>
-</div>
-
-<hr class="separator">
-<h2>2. Where</h2>
-<hr class="separator">
-<h2>Address</h2>
-
-<div class="form-group"> <!-- Street 1 -->
-<input type="text" class="form-control" id="street1_id" name="street1" placeholder="Home Address">
-</div>					
-
-<div class="row">
-<div class="form-group col-sm-6"> <!-- State Button -->
-<select class="form-control" id="state_id">
-<option value="AA">Choose a State</option>
-<option value="AL">Alabama</option>
-<option value="AK">Alaska</option>
-<option value="AZ">Arizona</option>
-<option value="AR">Arkansas</option>
-<option value="CA">California</option>
-<option value="CO">Colorado</option>
-<option value="CT">Connecticut</option>
-<option value="DE">Delaware</option>
-<option value="DC">District Of Columbia</option>
-<option value="FL">Florida</option>
-<option value="GA">Georgia</option>
-<option value="HI">Hawaii</option>
-<option value="ID">Idaho</option>
-<option value="IL">Illinois</option>
-<option value="IN">Indiana</option>
-<option value="IA">Iowa</option>
-<option value="KS">Kansas</option>
-<option value="KY">Kentucky</option>
-<option value="LA">Louisiana</option>
-<option value="ME">Maine</option>
-<option value="MD">Maryland</option>
-<option value="MA">Massachusetts</option>
-<option value="MI">Michigan</option>
-<option value="MN">Minnesota</option>
-<option value="MS">Mississippi</option>
-<option value="MO">Missouri</option>
-<option value="MT">Montana</option>
-<option value="NE">Nebraska</option>
-<option value="NV">Nevada</option>
-<option value="NH">New Hampshire</option>
-<option value="NJ">New Jersey</option>
-<option value="NM">New Mexico</option>
-<option value="NY">New York</option>
-<option value="NC">North Carolina</option>
-<option value="ND">North Dakota</option>
-<option value="OH">Ohio</option>
-<option value="OK">Oklahoma</option>
-<option value="OR">Oregon</option>
-<option value="PA">Pennsylvania</option>
-<option value="RI">Rhode Island</option>
-<option value="SC">South Carolina</option>
-<option value="SD">South Dakota</option>
-<option value="TN">Tennessee</option>
-<option value="TX">Texas</option>
-<option value="UT">Utah</option>
-<option value="VT">Vermont</option>
-<option value="VA">Virginia</option>
-<option value="WA">Washington</option>
-<option value="WV">West Virginia</option>
-<option value="WI">Wisconsin</option>
-<option value="WY">Wyoming</option>
-</select>					
-</div>									
-
-<div class="form-group col-sm-6"> <!-- State Button -->
-<select class="form-control" id="state_id">
-<option value="AA">Choose City</option>
-<option value="AL">Alabama</option>
-<option value="AK">Alaska</option>
-<option value="AZ">Arizona</option>
-<option value="AR">Arkansas</option>
-<option value="CA">California</option>
-<option value="CO">Colorado</option>
-<option value="CT">Connecticut</option>
-<option value="DE">Delaware</option>
-<option value="DC">District Of Columbia</option>
-<option value="FL">Florida</option>
-<option value="GA">Georgia</option>
-<option value="HI">Hawaii</option>
-<option value="ID">Idaho</option>
-<option value="IL">Illinois</option>
-<option value="IN">Indiana</option>
-<option value="IA">Iowa</option>
-<option value="KS">Kansas</option>
-<option value="KY">Kentucky</option>
-<option value="LA">Louisiana</option>
-<option value="ME">Maine</option>
-<option value="MD">Maryland</option>
-<option value="MA">Massachusetts</option>
-<option value="MI">Michigan</option>
-<option value="MN">Minnesota</option>
-<option value="MS">Mississippi</option>
-<option value="MO">Missouri</option>
-<option value="MT">Montana</option>
-<option value="NE">Nebraska</option>
-<option value="NV">Nevada</option>
-<option value="NH">New Hampshire</option>
-<option value="NJ">New Jersey</option>
-<option value="NM">New Mexico</option>
-<option value="NY">New York</option>
-<option value="NC">North Carolina</option>
-<option value="ND">North Dakota</option>
-<option value="OH">Ohio</option>
-<option value="OK">Oklahoma</option>
-<option value="OR">Oregon</option>
-<option value="PA">Pennsylvania</option>
-<option value="RI">Rhode Island</option>
-<option value="SC">South Carolina</option>
-<option value="SD">South Dakota</option>
-<option value="TN">Tennessee</option>
-<option value="TX">Texas</option>
-<option value="UT">Utah</option>
-<option value="VT">Vermont</option>
-<option value="VA">Virginia</option>
-<option value="WA">Washington</option>
-<option value="WV">West Virginia</option>
-<option value="WI">Wisconsin</option>
-<option value="WY">Wyoming</option>
-</select>					
-</div>
+        <div id="vendors" class="w3-container city1" style="display:none">
+          <p>content for vendors goes in here</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="form-group"> <!-- Zip Code-->
-<div class="col-sm-3">
-<p><span class="glyphicon glyphicon-map-marker"> Map</span></p>
-</div>
-</div>
+<script>
+  function openCity(evt, cityName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("city");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " w3-red";
+  }
 
-
-<hr class="separator">
-<h2>3. When</h2>
-<hr class="separator">
-
-<div class="form-group">
-<div class="row">
-<div class="col-sm-6">
-<h3>Start</h3>
-</div>
-
-<div class="col-sm-6">
-<h3>End</h3>
-</div>
-</div>
-</div>
-
-<div class="form-group">
-<div class="row">
-<div class="col-sm-3">
-<input type="text" id="startTime" placeholder="Start Time" name="startTime" class="form-control">
-</div>
-
-<div class="col-sm-3">
-<input type="text" id="startDate" placeholder="Start Date" name="startDate" class="form-control">
-</div>
-
-<div class="col-sm-3">
-<input type="text" id="StartTime" placeholder="End Time" name="EndTime" class="form-control">
-</div>
-
-<div class="col-sm-3">
-<input type="text" id="EndDate" placeholder="End Date" name="EndDate" class="form-control">
-</div>
-</div>
-</div>
-
-<div class="form-group">
-<div class="row">
-<div class="col-sm-12">
-<div class="dropdown">
-<a href="#" data-toggle="dropdown" class="dropdown-toggle">Schedule Multiple Activities <b class="caret"></b></a>
-<ul class="dropdown-menu">
-<li><form class="form-group"></li>
-<li><a href="#">Fill Form</a></li>
-</ul>
-</div>
-</div>
-</div>
-<hr class="separator">
-<h2>4. How</h2>
-<hr class="separator">
-
-<div class="form-group">
-<div class="row">
-<div class="col-sm-4">
-<input type="text" id="free" placeholder=" Free +" name="free" class="form-control">
-</div>
-
-<div class="col-sm-4">
-<input type="text" id="paid" placeholder=" Paid +" name="paid" class="form-control">
-</div>
-
-@if(!Auth::guest())	
-<h1> Welcome, {{ Auth::user()->first_name }}</h1></br> 
-@else
-<a href="#login"> login </a>
-@endif
-
-@if(!Auth::guest())
-<p> <a href="/logout">Logout </p>
-@else
-<a href="/signup">signup</a>
-@endif
-<div class="col-sm-4">
-<input type="text" id="reserve" placeholder=" Reserved +" name="reserve" class="form-control">
-</div>
-</div> 
-</div>
-
-<h3>Tickets</h3>
-
-<div class="form-group">
-<div class="row">
-<div class="col-sm-6">
-<input type="text" id="quantity" placeholder="- Quantiy +" name="quantiy" class="form-control">
-</div>
-
-<div class="col-sm-6">
-<input type="text" id="price" placeholder="- Price +" name="price" class="form-control">
-</div>
-
-
-</div> 
-</div>
-
-<h3>Link to Social Media</h3>
-
-<div class="form-group">
-<div class="row">
-<div class="col-sm-6">
-<input type="text" id="socialMedia" placeholder="Social Account" name="quantiy" class="form-control">
-</div>
-</div> 
-</div>
-
-<div class="form-group">
-<div class="col-sm-12">
-<div class="checkbox">
-<label>
-<input type="checkbox">I agree to the <a href="#">terms</a> of us 
-</label>
-</div>
-</div>
-</div>
-
-<div class="form-group">
-<div class="row">
-<div class="col-sm-6">
-<button type="Submit" class="btn btn-primary btn-block">Save</button>
-</div>                            
-<div class="col-sm-6">
-<button type="submit" class="btn btn-success btn-block">Preview</button>
-</div>
-</div>
-</form>
-<script type="text/javascript"
-src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js">
-</script> 
-<script type="text/javascript"
-src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js">
+  function openCity1(evt1, cityName1) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("city1");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+       tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
+    }
+    document.getElementById(cityName1).style.display = "block";
+    evt1.currentTarget.firstElementChild.className += " w3-border-red";
+  }
 </script>
-<script type="text/javascript"
-src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
-</script>
-<script type="text/javascript"
-src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js">
-</script>
-<script type="text/javascript">
-$('#datetimepicker').datetimepicker({
-format: 'dd/MM/yyyy hh:mm:ss',
-language: 'pt-BR'
-});
-</script>         
 </body>
 </html>
->>>>>>> 9f5cb43085be3c8e2a9e2c2ad68751cde1416934

@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Document</title>
+<link href="{{ asset('/css/test.css') }}" rel="stylesheet">
+<link href="{{ asset('css/test.css') }}" rel="stylesheet" type="text/css" >
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -22,7 +24,7 @@ margin: 20px;
 <nav class="navbar navbar-inverse">
 <div class="container-fluid">
 <div class="navbar-header">
-<a class="navbar-brand" href="#">WebSiteName</a>
+<a class="navbar-brand" href="#"></a>
 </div>
 <ul class="nav navbar-nav">
 <li style="margin: 0px 20px;"><h2><a href="#">Create Event</a></h2></li>
@@ -33,45 +35,32 @@ margin: 20px;
 </ul>
 </div>
 </nav> > 
-
 <div class="container" style="width:500px;">
 <form class="form-horizontal" role="form" method="POST" action="/createevent" enctype="multipart/form-data">
-
 <input name="_token" type="hidden" value="{{ csrf_token() }}">
-<h2>1. What</h2>
+<h1>Signup Form</h2>
 <hr class="separator">
-
-<h2>Signup Form</h2>
-@if ( count( $errors ) > 0 )
-@foreach ($errors->all() as $error)
-<div>{{ $error }}</div>
-@endforeach
-@endif
-<div class="row btn-primary" style="width:20%; boarder-radius: 50%;">
-<div class="col-md-6" style="padding:5px 0px 0px 0px; margin:auto;">
-<p>Public</p>
+<h2>1. What</h2>
+<div class="row" style="width:150px;">
+<div class="col-md-6">
+<button class="btn btn-sm btn-primary">Public</button>
 </div>
-<div class="col-md-6" style="padding:5px 0px 0px 0px; margin:auto;">
-<p>Private</p>
+<div class="col-md-6">
+        <button class="btn btn-sm btn-primary">Private</button>
 </div>
-
 </div>
-
-
 <div class="form-group">
 <h4 style="padding-left: 15px;">Event Title<span class="fa fa-asterisk text-danger"> *</span></h4> 
 <div class="col-sm-6">
 <input type="text" id="" name="title" placeholder="Event Title" class="form-control" autofocus>
 </div>
 </div>
-
 <div class="form-group">
 <h4 style="padding-left: 15px;">Description<span class="fa fa-asterisk text-danger"> *</span></h4>
 <div class="col-sm-12">
 <textarea type="description" name="description" id="description" placeholder="Write a short passage to describe your event " class="form-control"></textarea>
 </div>
 </div>
-
 <div class="form-group">
 <div class="col-sm-12">
 <label class="radio-inline">
@@ -93,14 +82,12 @@ Upload
 </div></li>
 </ul>
 </div>
-
 <div class="form-group">
 <h4 style="padding-left: 15px;">Organizer Name<span class="fa fa-asterisk text-danger"> *</span></h4>
 <div class="col-sm-12">
 <input type="text" id="orgName" placeholder="Organizer Name" name="org_name" class="form-control">
 </div>
 </div>
-
 <div class="form-group">
 <h4 style="padding-left: 15px;">Event Flier<span class="fa fa-asterisk text-danger"> *</span></h4>
 <div class="col-sm-12">
@@ -113,7 +100,6 @@ Upload
 </div>
 </div>
 </div>
-
 <div class="form-group">
 <h4 style="padding-left: 15px;">Organizer Logo<span class="fa fa-asterisk text-danger"> *</span></h4>
 <div class="col-sm-12">
@@ -123,16 +109,13 @@ Upload
 </div>
 </div>
 </div>
-
 <hr class="separator">
 <h2>2. Where</h2>
 <hr class="separator">
 <h2>Address</h2>
-
 <div class="form-group"> <!-- Street 1 -->
 <input type="text" class="form-control" id="street1_id" name="Address" placeholder="Home Address">
-</div>					
-
+</div>                    
 <div class="row">
 <div class="form-group col-sm-6"> <!-- State Button -->
 <select class="form-control" id="state_id">
@@ -188,9 +171,8 @@ Upload
 <option value="WV">West Virginia</option>
 <option value="WI">Wisconsin</option>
 <option value="WY">Wyoming</option>
-</select>					
-</div>									
-
+</select>                 
+</div>                                    
 <div class="form-group col-sm-6"> <!-- State Button -->
 <select class="form-control" id="state_id">
 <option value="AA">Choose City</option>
@@ -245,53 +227,43 @@ Upload
 <option value="WV">West Virginia</option>
 <option value="WI">Wisconsin</option>
 <option value="WY">Wyoming</option>
-</select>					
+</select>                 
 </div>
 </div>
-
 <div class="form-group"> <!-- Zip Code-->
 <div class="col-sm-3">
-<p><span class="glyphicon glyphicon-map-marker"> Map</span></p>
+<p><a href="#"><span class="glyphicon glyphicon-map-marker"> Map</a></span></p>
 </div>
 </div>
-
-
 <hr class="separator">
 <h2>3. When</h2>
 <hr class="separator">
-
 <div class="form-group">
 <div class="row">
 <div class="col-sm-6">
 <h3>Start</h3>
 </div>
-
 <div class="col-sm-6">
 <h3>End</h3>
 </div>
 </div>
 </div>
-
 <div class="form-group">
 <div class="row">
 <div class="col-sm-3">
 <input type="text" id="startTime" placeholder="Start Time" name="startTime" class="form-control">
 </div>
-
 <div class="col-sm-3">
 <input type="text" id="startDate" placeholder="Start Date" name="startDate" class="form-control">
 </div>
-
 <div class="col-sm-3">
 <input type="text" id="StartTime" placeholder="End Time" name="EndTime" class="form-control">
 </div>
-
 <div class="col-sm-3">
 <input type="text" id="EndDate" placeholder="End Date" name="EndDate" class="form-control">
 </div>
 </div>
 </div>
-
 <div class="form-group">
 <div class="row">
 <div class="col-sm-12">
@@ -307,52 +279,31 @@ Upload
 <hr class="separator">
 <h2>4. How</h2>
 <hr class="separator">
-
 <div class="form-group">
 <div class="row">
 <div class="col-sm-4">
 <input type="text" id="free" placeholder=" Free +" name="free" class="form-control">
 </div>
-
 <div class="col-sm-4">
 <input type="text" id="paid" placeholder=" Paid +" name="paid" class="form-control">
 </div>
-
-@if(!Auth::guest())	
-<h1> Welcome, {{ Auth::user()->first_name }}</h1></br> 
-@else
-<a href="#login"> login </a>
-@endif
-
-@if(!Auth::guest())
-<p> <a href="/logout">Logout </p>
-@else
-<a href="/signup">signup</a>
-@endif
 <div class="col-sm-4">
 <input type="text" id="reserve" placeholder=" Reserved +" name="reserve" class="form-control">
 </div>
 </div> 
 </div>
-
 <h3>Tickets</h3>
-
 <div class="form-group">
 <div class="row">
 <div class="col-sm-6">
 <input type="text" id="quantity" placeholder="- Quantiy +" name="quantiy" class="form-control">
 </div>
-
 <div class="col-sm-6">
 <input type="text" id="price" placeholder="- Price +" name="price" class="form-control">
 </div>
-
-
 </div> 
 </div>
-
 <h3>Link to Social Media</h3>
-
 <div class="form-group">
 <div class="row">
 <div class="col-sm-6">
@@ -360,7 +311,6 @@ Upload
 </div>
 </div> 
 </div>
-
 <div class="form-group">
 <div class="col-sm-12">
 <div class="checkbox">
@@ -370,7 +320,6 @@ Upload
 </div>
 </div>
 </div>
-
 <div class="form-group">
 <div class="row">
 <div class="col-sm-6">
