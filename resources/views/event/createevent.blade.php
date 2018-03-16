@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Document</title>
+<link href="{{ asset('/css/test.css') }}" rel="stylesheet">
+<link href="{{ asset('css/test.css') }}" rel="stylesheet" type="text/css" >
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -35,18 +37,25 @@ margin: 20px;
 </nav> > 
 
 <div class="container" style="width:500px;">
+
+	
 <form class="form-horizontal" role="form" method="POST" action="/createevent" enctype="multipart/form-data">
 
 <input name="_token" type="hidden" value="{{ csrf_token() }}">
+
+	 @if ( count( $errors ) > 0 )
+   @foreach ($errors->all() as $error)
+      <div>{{ $error }}</div>
+  @endforeach
+  @else
+
+<!--  {{$message}}-->
+@endif
+
 <h2>1. What</h2>
 <hr class="separator">
 
-<h2>Signup Form</h2>
-@if ( count( $errors ) > 0 )
-@foreach ($errors->all() as $error)
-<div>{{ $error }}</div>
-@endforeach
-@endif
+
 <div class="row btn-primary" style="width:20%; boarder-radius: 50%;">
 <div class="col-md-6" style="padding:5px 0px 0px 0px; margin:auto;">
 <p>Public</p>
@@ -75,10 +84,10 @@ margin: 20px;
 <div class="form-group">
 <div class="col-sm-12">
 <label class="radio-inline">
-<input type="radio" name="free">free
+	 <input type="radio" name="free" value="1">free
 </label>
 <label class="radio-inline">
-<input type="radio" name="free">paid
+	<!--input type="radio" name="free" value="0"-->paid
 </label>
 </div>
 </div>
@@ -135,7 +144,7 @@ Upload
 
 <div class="row">
 <div class="form-group col-sm-6"> <!-- State Button -->
-<select class="form-control" id="state_id">
+<select class="form-control" id="state_id" name="state">
 <option value="AA">Choose a State</option>
 <option value="AL">Alabama</option>
 <option value="AK">Alaska</option>
@@ -192,7 +201,7 @@ Upload
 </div>									
 
 <div class="form-group col-sm-6"> <!-- State Button -->
-<select class="form-control" id="state_id">
+<select class="form-control" id="state_id" name="city">
 <option value="AA">Choose City</option>
 <option value="AL">Alabama</option>
 <option value="AK">Alaska</option>
@@ -318,7 +327,7 @@ Upload
 <input type="text" id="paid" placeholder=" Paid +" name="paid" class="form-control">
 </div>
 
-@if(!Auth::guest())	
+<!--@if(!Auth::guest())	
 <h1> Welcome, {{ Auth::user()->first_name }}</h1></br> 
 @else
 <a href="#login"> login </a>
@@ -328,7 +337,7 @@ Upload
 <p> <a href="/logout">Logout </p>
 @else
 <a href="/signup">signup</a>
-@endif
+@endif--> 
 <div class="col-sm-4">
 <input type="text" id="reserve" placeholder=" Reserved +" name="reserve" class="form-control">
 </div>
@@ -340,11 +349,11 @@ Upload
 <div class="form-group">
 <div class="row">
 <div class="col-sm-6">
-<input type="text" id="quantity" placeholder="- Quantiy +" name="quantiy" class="form-control">
+<input type="text" id="quantity" placeholder="- Quantiy +" name="ticket_qty" class="form-control">
 </div>
 
 <div class="col-sm-6">
-<input type="text" id="price" placeholder="- Price +" name="price" class="form-control">
+<input type="text" id="price" placeholder="- Price +" class="form-control" name="ticket_price">
 </div>
 
 
