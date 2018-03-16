@@ -90,11 +90,11 @@
  
                       <div class="w3-container">
                         <div class="w3-bar w3-white">
-                          <button class="w3-bar-item w3-button tablink" style="font-weight:bold; font-size:18px; margin-left:30px; padding-left:5px; border-radius:7px; width:120px; height:40px; background-color:grey;" onclick="openCity(event,'hiking')">Hiking</button>
-                          <button class="w3-bar-item w3-button tablink" style="font-weight:bold; font-size:18px; padding-left:5px; border-radius: 4%; width:120px; height:40px; background-color:grey;" onclick="openCity(event,'jogging')">Jogging</button>
-                          <button class="w3-bar-item w3-button tablink" style="font-weight:bold; font-size:18px; padding-left:5px; border-radius: 4%; width:120px; height:40px; background-color:grey;" onclick="openCity(event,'dance')">Dance</button>
-                          <button class="w3-bar-item w3-button tablink" style="font-weight:bold; font-size:18px; padding-left:5px; border-radius: 4%; width:120px; height:40px; background-color:grey;" onclick="openCity(event,'tour_guide')">Tour Guide</button>
-                          <button class="w3-bar-item w3-button tablink" style="font-weight:bold; font-size:18px; padding-left:5px; border-radius: 4%; width:120px; height:40px; background-color:grey;" onclick="openCity(event,'tasks')">Tasks</button>
+                          <button class="w3-bar-item w3-button tablink" style="font-weight:bold; font-size:14px; margin-left:30px; padding-left:5px; border-radius:4%; width:100px; height:30px; background-color:grey;" onclick="openCity(event,'hiking')">Hiking</button>
+                          <button class="w3-bar-item w3-button tablink" style="font-weight:bold; font-size:14px; padding-left:5px; border-radius: 4%; width:100px; height:30px; background-color:grey;" onclick="openCity(event,'jogging')">Jogging</button>
+                          <button class="w3-bar-item w3-button tablink" style="font-weight:bold; font-size:14px; padding-left:5px; border-radius: 4%; width:100px; height:30px; background-color:grey;" onclick="openCity(event,'dance')">Dance</button>
+                          <button class="w3-bar-item w3-button tablink" style="font-weight:bold; font-size:14px; padding-left:5px; border-radius: 4%; width:100px; height:30px; background-color:grey;" onclick="openCity(event,'tour_guide')">Tour Guide</button>
+                          <button class="w3-bar-item w3-button tablink" style="font-weight:bold; font-size:14px; padding-left:5px; border-radius: 4%; width:100px; height:30px; background-color:grey;" onclick="openCity(event,'tasks')">Tasks</button>
                         </div>
                         
                         <div id="hiking" class="w3-container w3-border city" style="background-color:#ffffff;">
